@@ -17,6 +17,14 @@ namespace OlympiadProgramming.DAL.Repositories
             _context = dbContext;
         }
 
+        public User CreateUser(User user)
+        {
+            var newUser = _context.Users.Add(user);
+            _context.SaveChanges();
+
+            return newUser.Entity;
+        }
+
         public User GetUserByLoginAndPassword(string userName, string password)
         {
             return _context.Users.SingleOrDefault(u => u.UserName == userName

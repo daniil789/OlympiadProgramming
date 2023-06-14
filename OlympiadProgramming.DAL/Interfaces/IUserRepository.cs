@@ -10,5 +10,6 @@ namespace OlympiadProgramming.DAL.Interfaces
     public interface IUserRepository
     {
         User GetUserByLoginAndPassword(string userName, string password);
+        User CreateUser(User user);
     }
 }

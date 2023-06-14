@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OlympiadProgramming.BLL.Dto;
 using OlympiadProgramming.BLL.Interfaces;
 using OlympiadProgramming.Web.Interfaces;
 using OlympiadProgramming.Web.Models.Requests;
@@ -17,7 +18,7 @@ namespace OlympiadProgramming.Web.Controllers
             _jWTTokenService = jWTTokenService;
         }
 
-        [HttpPost]
+        [HttpPost("Login")]
         public IActionResult Login([FromBody] LoginRequest loginRequest)
         {
             if (loginRequest is null)
@@ -27,6 +28,33 @@ namespace OlympiadProgramming.Web.Controllers
 
             var user = _userService.GetUserByLoginAndPassword(loginRequest.Username
                                                             , loginRequest.Password);
+            if (user is null)
+            {
+                return Unauthorized("Пользователя не существует");
+            }
+
+            var token = _jWTTokenService.Authenticate(user.UserName);
+
+            return Ok(token);
+        }
+
+        [HttpPost("Register")]
+        public IActionResult Register([FromBody] RegisterRequest registerRequest)
+        {
+            if (registerRequest is null)
+            {
+                return BadRequest("Не заполнены обязательные поля");
+            }
+
+            var createUserDto = new CreateUserDto
+            {
+                FirstName = registerRequest.FirstName,
+                LastName = registerRequest.LastName,
+                UserName = registerRequest.UserName,
+                Password = registerRequest.Password
+            };
+
+            var user = _userService.RegisterUser(createUserDto);
             if (user is null)
             {
                 return Unauthorized("Пользователя не существует");

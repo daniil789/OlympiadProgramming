@@ -21,7 +21,7 @@ namespace OlympiadProgramming.DAL.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Role>().HasData(
-                new Role { Id = 1, Name = "Тренер" }
+                new Role { Id = 1, Name = "Капитан" }
               , new Role { Id = 2, Name = "Участник" });
 
             modelBuilder.Entity<User>().HasData(
@@ -30,8 +30,8 @@ namespace OlympiadProgramming.DAL.Models
                         Id = 1,
                         FirstName = "Test",
                         LastName = "Test",
-                        UserName = "TestInstructor",
-                        Password = "Qwerty12345",
+                        UserName = "Capitan",
+                        Password = "Qwerty1",
                         RoleId = 1
                     },
                   new User
@@ -40,7 +40,7 @@ namespace OlympiadProgramming.DAL.Models
                       FirstName = "Test",
                       LastName = "Test",
                       UserName = "TestUser",
-                      Password = "Qwerty12345",
+                      Password = "Qwerty1",
                       RoleId = 2
                   }
             );
