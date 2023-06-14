@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.Web", "OlympiadProgramming\OlympiadProgramming.Web.csproj", "{FEF15218-D791-4A64-8518-AD113C0CC149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlympiadProgramming.BLL", "OlympiadProgramming.BLL\OlympiadProgramming.BLL.csproj", "{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlympiadProgramming.DAL", "OlympiadProgramming.DAL\OlympiadProgramming.DAL.csproj", "{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FEF15218-D791-4A64-8518-AD113C0CC149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF15218-D791-4A64-8518-AD113C0CC149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF15218-D791-4A64-8518-AD113C0CC149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
