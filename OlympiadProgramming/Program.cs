@@ -7,6 +7,7 @@ using OlympiadProgramming.BLL.Services;
 using OlympiadProgramming.DAL.Interfaces;
 using OlympiadProgramming.DAL.Models;
 using OlympiadProgramming.DAL.Repositories;
+using OlympiadProgramming.Web.AutoMapper;
 using OlympiadProgramming.Web.Interfaces;
 using OlympiadProgramming.Web.Models.Security;
 using OlympiadProgramming.Web.Services;
@@ -25,6 +26,10 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IJWTTokenService, JWTServiceManage>();
+builder.Services.AddTransient<ITeamRepositiry, TeamRepository>();
+builder.Services.AddTransient<ITeamService, TeamService>();
+
+builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

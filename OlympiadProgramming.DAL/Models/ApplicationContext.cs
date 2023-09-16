@@ -10,6 +10,10 @@ namespace OlympiadProgramming.DAL.Models
     public class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Role> Roles { get; set; } = null!;
+        public DbSet<Team> Teams { get; set; } = null!;
+        public DbSet<TeamsToUsersLink> TeamsToUsersLinks { get; set; } = null!;
+
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
          : base(options)

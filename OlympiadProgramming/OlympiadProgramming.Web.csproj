@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OlympiadProgramming.BLL\OlympiadProgramming.BLL.csproj" />
+    <ProjectReference Include="..\OlympiadProgramming.Common\OlympiadProgramming.Common.csproj" />
   </ItemGroup>
 
 </Project>
