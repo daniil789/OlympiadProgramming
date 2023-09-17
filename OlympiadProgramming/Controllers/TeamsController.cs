@@ -43,5 +43,19 @@ namespace OlympiadProgramming.Web.Controllers
         {
             return Ok(_teamService.GetTeams());
         }
+
+        [HttpPost("AddUserToTeam")]
+        public IActionResult AddUserToTeam(int userId, int teamId)
+        {
+            try
+            {
+                var userAdded = _teamService.AddUserToTeam(userId, teamId);
+                return Ok(userAdded ? "Пользователь добавлен" : "Пользователь уже в команде");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

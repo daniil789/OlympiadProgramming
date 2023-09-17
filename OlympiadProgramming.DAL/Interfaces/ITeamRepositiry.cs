@@ -11,5 +11,7 @@ namespace OlympiadProgramming.DAL.Interfaces
     {
         void CreateTeam(Team team);
         List<Team> GetTeams();
+        void AddUserToTeam(int userId, int teamId);
+        bool UserExistInTeam(int userId, int teamId); 
     }
 }

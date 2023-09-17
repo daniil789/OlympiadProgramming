@@ -20,6 +20,11 @@ namespace OlympiadProgramming.DAL.Repositories
             return newUser.Entity;
         }
 
+        public User GetUserById(int id)
+        {
+            return _context.Users.SingleOrDefault(x => x.Id == id);
+        }
+
         public User GetUserByLoginAndPassword(string userName, string password)
         {
             return _context.Users.SingleOrDefault(u => u.UserName == userName 

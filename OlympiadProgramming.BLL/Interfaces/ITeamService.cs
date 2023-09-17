@@ -11,5 +11,6 @@ namespace OlympiadProgramming.BLL.Interfaces
     {
         void CreateTeam(TeamDto team);
         List<TeamDto> GetTeams();
+        bool AddUserToTeam(int userId, int teamId);
     }
 }

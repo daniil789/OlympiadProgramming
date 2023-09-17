@@ -11,5 +11,6 @@ namespace OlympiadProgramming.DAL.Interfaces
     {
         User GetUserByLoginAndPassword(string userName, string password);
         User CreateUser(User user);
+        User GetUserById(int id);
     }
 }

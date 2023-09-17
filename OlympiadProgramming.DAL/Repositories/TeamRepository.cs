@@ -17,6 +17,13 @@ namespace OlympiadProgramming.DAL.Repositories
             _context = context;
         }
 
+        public void AddUserToTeam(int userId, int teamId)
+        {
+            var link = new TeamsToUsersLink(userId, teamId);
+            _context.TeamsToUsersLinks.Add(link);
+            _context.SaveChanges();
+        }
+
         public void CreateTeam(Team team)
         {
             _context.Teams.Add(team);
@@ -28,6 +35,13 @@ namespace OlympiadProgramming.DAL.Repositories
             var teams = _context.Teams.ToList();
 
             return teams;
+        }
+
+        public bool UserExistInTeam(int userId, int teamId)
+        {
+            var link = _context.TeamsToUsersLinks.FirstOrDefault(x => x.UserId == userId && x.TeamId == teamId);
+
+            return link != null;
         }
     }
 }

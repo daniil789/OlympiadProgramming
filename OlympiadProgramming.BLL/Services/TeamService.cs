@@ -11,6 +11,7 @@ namespace OlympiadProgramming.BLL.Services
     {
         private readonly ITeamRepositiry _teamRepositiry;
         private readonly IMapper _mapper;
+        private readonly IUserRepository _userRepository;
 
         public TeamService(ITeamRepositiry teamRepositiry, IMapper mapper)
         {
@@ -32,6 +33,19 @@ namespace OlympiadProgramming.BLL.Services
             var teamsDto = _mapper.MapList<TeamDto>(teamsDal);
 
             return teamsDto;
+        }
+
+        public bool AddUserToTeam(int userId, int teamId)
+        {
+            if (!_teamRepositiry.UserExistInTeam(userId, teamId))
+            {
+                _teamRepositiry.AddUserToTeam(userId, teamId);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
