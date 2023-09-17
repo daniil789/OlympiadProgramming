@@ -5,9 +5,17 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.Web", "OlympiadProgramming\OlympiadProgramming.Web.csproj", "{FEF15218-D791-4A64-8518-AD113C0CC149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlympiadProgramming.BLL", "OlympiadProgramming.BLL\OlympiadProgramming.BLL.csproj", "{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.BLL", "OlympiadProgramming.BLL\OlympiadProgramming.BLL.csproj", "{BB70EBF8-B5D2-4AB6-8357-1CD0DFAD0E93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlympiadProgramming.DAL", "OlympiadProgramming.DAL\OlympiadProgramming.DAL.csproj", "{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.DAL", "OlympiadProgramming.DAL\OlympiadProgramming.DAL.csproj", "{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.BLL.Tests", "OlympiadProgramming.BLL.Tests\OlympiadProgramming.BLL.Tests.csproj", "{FE97391C-FA83-45EC-85D3-426BAB61D949}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2B521A9B-3467-4693-965D-959C9F9C5180}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OlympiadProgramming.DAL.Tests", "OlympiadProgramming.DAL.Tests\OlympiadProgramming.DAL.Tests.csproj", "{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlympiadProgramming.Common", "OlympiadProgramming.Common\OlympiadProgramming.Common.csproj", "{4F2588EB-EC4A-4B85-BA3D-9C8A20112665}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +35,25 @@ Global
 		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA7CFD92-FC8D-4285-ACEA-9C4AE58D0F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE97391C-FA83-45EC-85D3-426BAB61D949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE97391C-FA83-45EC-85D3-426BAB61D949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE97391C-FA83-45EC-85D3-426BAB61D949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE97391C-FA83-45EC-85D3-426BAB61D949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2588EB-EC4A-4B85-BA3D-9C8A20112665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2588EB-EC4A-4B85-BA3D-9C8A20112665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2588EB-EC4A-4B85-BA3D-9C8A20112665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2588EB-EC4A-4B85-BA3D-9C8A20112665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE97391C-FA83-45EC-85D3-426BAB61D949} = {2B521A9B-3467-4693-965D-959C9F9C5180}
+		{2750A47F-DFDE-4D3F-A7A7-4D0DC8A6DEF5} = {2B521A9B-3467-4693-965D-959C9F9C5180}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3F1C610-CB37-4F16-ACE1-2DBD2F2A5165}
