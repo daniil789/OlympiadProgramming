@@ -13,13 +13,17 @@ namespace OlympiadProgramming.DAL.Models
         public DbSet<Role> Roles { get; set; } = null!;
         public DbSet<Team> Teams { get; set; } = null!;
         public DbSet<TeamsToUsersLink> TeamsToUsersLinks { get; set; } = null!;
+        public DbSet<Olympiad> Olympiads { get; set; } = null!;
+        public DbSet<Task> Tasks { get; set; } = null!;
+        public DbSet<OlympiadToTaskLink> OlympiadToTaskLinks { get; set; } = null!;
+        public DbSet<TeamToOlympiadLink> TeamToOlympiadLinks { get; set; } = null!;
 
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
          : base(options)
         {
-          // Database.EnsureDeleted();
-          // Database.EnsureCreated();
+             //Database.EnsureDeleted();
+             //Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -48,6 +52,13 @@ namespace OlympiadProgramming.DAL.Models
                       RoleId = 2
                   }
             );
+            modelBuilder.Entity<Olympiad>().HasData(
+                new Olympiad
+                {
+                    Id = 1,
+                    Name = "Test",
+                    Description = "Test"
+                });
         }
     }
 }

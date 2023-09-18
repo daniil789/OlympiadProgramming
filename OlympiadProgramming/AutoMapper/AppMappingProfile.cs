@@ -13,6 +13,9 @@ namespace OlympiadProgramming.Web.AutoMapper
             CreateMap<Team, TeamDto>();
 
             CreateMap<CreateTeamRequest, TeamDto>();
+
+            CreateMap<CreateTeamToOlympiadLinkRequest, CreateTeamToOlympiadLinkDto>();
+            CreateMap<CreateTeamToOlympiadLinkDto, TeamToOlympiadLink>();
         }
     }
 }

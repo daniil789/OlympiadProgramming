@@ -28,6 +28,8 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IJWTTokenService, JWTServiceManage>();
 builder.Services.AddTransient<ITeamRepositiry, TeamRepository>();
 builder.Services.AddTransient<ITeamService, TeamService>();
+builder.Services.AddTransient<IOlympiadRepository, OlympiadRepository>();
+builder.Services.AddTransient<IOlympiadService, OlympiadService>();
 
 builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 
