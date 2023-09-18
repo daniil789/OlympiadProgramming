@@ -30,6 +30,8 @@ builder.Services.AddTransient<ITeamRepositiry, TeamRepository>();
 builder.Services.AddTransient<ITeamService, TeamService>();
 builder.Services.AddTransient<IOlympiadRepository, OlympiadRepository>();
 builder.Services.AddTransient<IOlympiadService, OlympiadService>();
+builder.Services.AddTransient<ITaskRepository, TaskRepository>();
+builder.Services.AddTransient<ITaskService, TaskService>();
 
 builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 

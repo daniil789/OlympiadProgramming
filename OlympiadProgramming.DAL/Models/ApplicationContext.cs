@@ -22,8 +22,8 @@ namespace OlympiadProgramming.DAL.Models
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
          : base(options)
         {
-             //Database.EnsureDeleted();
-             //Database.EnsureCreated();
+             Database.EnsureDeleted();
+             Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,6 +59,13 @@ namespace OlympiadProgramming.DAL.Models
                     Name = "Test",
                     Description = "Test"
                 });
+            modelBuilder.Entity<Task>().HasData(
+               new Task
+               {
+                   Id = 1,
+                   Description = "Test",
+                   Result = "Test"
+               });
         }
     }
 }
